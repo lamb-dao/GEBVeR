@@ -139,8 +139,42 @@ Output files are organized in the "output" directory, with subdirectories for ea
 
 * predict
 
-Purpose:
+Purpose: Performs genomic prediction for breeding trait data using the BWGS
+(Breeding with Genomic Selection) package in R. The program predicts trait
+values for target genotypes based on a provided training population. The program
+automates the genomic prediction workflow, handling multiple traits and target
+populations, while providing visual and numerical outputs for interpretation.
+
 Requirements:
+- R environment with: pacman, BWGS, vcfR, openxlsx, tools, ggplot2, viridis, reshape, plyr
+- Input directory containing:
+  - Uncompressed .vcf files for training genotypes
+  - Excel file with BLUE estimates of traits for training population
+  - 'predict' subdirectory with .vcf files for target genotypes
+- A detailed input file specification and expected directory structure is found in the comments
+
 Usage:
+1. Set working directory
+2. Select input files when prompted
+3. Enter column numbers for genotype and trait data
+4. Before running main loop, set variables and selections
+   1. pval (line 191)
+   2. method (line 200)
+5. Run main loop
+
 Function:
+1. Loads and processes training genotype and phenotype data
+2. Loads target genotype data from .vcf files
+3. Performs genomic prediction using BWGS for each trait and target file
+4. Generates visualizations of predictions
+5. Outputs prediction results and plots
+
 Output:
+For each trait and target file combination:
+- CSV file with predictions
+- PDF plots:
+  - Sorted predictions
+  - Predictions with standard deviation
+  - Distribution of predicted values
+  - Distribution of training values
+  - Overlay of training and predicted distributions

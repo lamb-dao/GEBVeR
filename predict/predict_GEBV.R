@@ -29,8 +29,8 @@ p_load("plyr")
 
 
 #Requires an input dir containing uncompressed .vcf files, as processed by merge tools.
-# in dir have xlsx of BLUE estimates of traits
-# in dir input a dir predict with .vcf files can be loaded automatically and processed
+# in dir have csv or xlsx of BLUE estimates of traits
+# within dir 'input' a dir 'predict' containing .vcf files can be loaded automatically and processed
 # Requires an environment with up to date R version
 
 #### Clean up for new run ####
@@ -117,7 +117,7 @@ ls()
 setwd(home)
 setwd("input")
 ## pheno_train <- read.xlsx(pheno_train_file)
-&&& change to read csv
+## &&& change to read csv
 pheno_train <- read.delim(pheno_train_file, sep =",")
 
 setwd(home)
