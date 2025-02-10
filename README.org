@@ -58,6 +58,44 @@ Output:
 
 * gtMetric
 
+Purpose: Evaluates the accuracy of genomic prediction models by comparing
+predicted trait values against ground truth data for multiple traits. This
+program provides a comprehensive analysis of genomic prediction accuracy,
+suitable for evaluating and comparing different prediction models in plant
+breeding programs.
+
+Requirements:
+- R environment with required packages (pacman, openxlsx, sys, glue, tidyr,
+  recometrics, Hmisc, corrplot, ggplot2, gridExtra)
+- Input directory structure with ground truth, phenotype, and prediction CSV files
+- A detailed input file specification and expected directory structure is found in the comments
+
+
+Usage:
+1. Set up the input directory structure as specified in the script comments.
+2. Set the working directory
+3. Follow user prompts
+   1. If necessary, rename columns in ground truth file to match
+   2. Select genotype column
+   3. Select trait columns to process
+4. Evaluate metric and utility functions
+5. Run the loop to process all matched predictions
+
+Function:
+1. Loads and processes input files (ground truth, phenotype, predictions).
+2. Reports expected column matches
+3. Aligns data across files, matching genotypes and traits.
+4. Calculates various statistical metrics (correlation, MSE, RMSE, etc.).
+5. Generates visualizations (scatter plots, Bland-Altman plots, histograms).
+6. Performs analysis for each selected trait with a matching prediction file.
+
+Output:
+For each analyzed trait, the program generates:
+1. CSV file with true and predicted values
+2. Text file with statistical metrics
+3. PDF file with multiple plots (scatter, Bland-Altman, histogram, agreement matrix)
+4. All output files are organized in trait-specific subdirectories within the 'output' folder.
+
 * phenoCorrelation
 
 * predict
