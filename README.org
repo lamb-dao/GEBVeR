@@ -1,0 +1,18 @@
+#+title: GEBVeR
+
+Genomic Estimated Breeding Values in R
+A suite of tools for GEBV model cross evaluation, training, prediction and ground truth evaluation.
+
+* crossValidate
+
+Purpose:
+Requirements:
+Usage:
+Function:
+Output:
+
+* gtMetric
+
+* phenoCorrelation
+
+* predict
