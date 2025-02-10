@@ -1,18 +1,57 @@
 #+title: GEBVeR
 
 Genomic Estimated Breeding Values in R
+
 A suite of tools for GEBV model cross evaluation, training, prediction and ground truth evaluation.
+
+cite BWGS&&&
 
 * crossValidate
 
-Purpose:
+Purpose: Performs genomic prediction using various methods and
+cross-validation, comparing their predictive abilities for a given phenotypic
+trait using genotype data. The program provides a comprehensive analysis of
+genomic prediction methods for the given dataset, allowing researchers to
+compare and select the most suitable approach for their breeding program.
+
 Requirements:
+- R environment with packages: BWGS, vcfR, sys
+- Input directory containing:
+  - Uncompressed .vcf genotype files
+  - CSV file with phenotype data (BLUE/BLUP values)
+
 Usage:
+1. Set working directory
+2. Interactively select input files when prompted
+3. Select column with genotypes
+4. select the set of methods you will cross validate
+5. Run the loop to calculate individual model results
+6. Run the loop to collect and compare results
+
 Function:
+1. Sets up directory structure
+2. Loads and processes genotype and phenotype data
+3. Performs cross-validation using multiple user selected genomic prediction methods
+4. Calculates predictive abilities and standard deviations for each method
+5. Visualizes results through boxplots and bar plots
+
 Output:
+- CVcomparison.pdf: Boxplot comparing predictive abilities of methods
+- CVdeviation.pdf: Bar plot of standard deviations for each method
+- Summary.txt: Text file with summary statistics for all methods
+- User may select a specific model for the following
+- SummaryGBLUP.txt: Detailed summary for GBLUP method
+- Summary_BA_BC_BL.txt: Detailed summaries for BA, BC, and BL methods
+- Workspace image saved as "statePostCV" in data directory
 
 * gtMetric
 
 * phenoCorrelation
 
 * predict
+
+Purpose:
+Requirements:
+Usage:
+Function:
+Output:
