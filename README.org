@@ -2,7 +2,10 @@
 
 Genomic Estimated Breeding Values in R
 
-A suite of tools for GEBV model cross evaluation, training, prediction and ground truth evaluation.
+A suite of tools for GEBV model cross evaluation, training, prediction and
+ground truth evaluation. These tools are interactive, and should be read,
+understood and require alternating interactive user modification with sections
+of run time.
 
 https://github.com/vangiangtran/BWGS
 
