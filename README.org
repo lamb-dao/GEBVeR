@@ -98,6 +98,45 @@ For each analyzed trait, the program generates:
 
 * phenoCorrelation
 
+Work In Progress
+
+Purpose: To analyze and compare intra and inter trait correlation of phenotypic
+data from two sources (training and validation) for multiple traits, generating
+statistical metrics and visualizations.
+
+Requirements:
+- R environment with current version
+- Required R packages: pacman, openxlsx, sys, glue, tidyr, recometrics, Hmisc, corrplot, ggplot2, gridExtra
+- Input CSV files: training phenotype file and ground truth phenotype file
+- A detailed input file specification and expected directory structure is found in the comments
+
+Usage:
+1. Set working directory
+2. Read the script
+3. Select input CSV files when prompted
+4. Specify trait columns and genotype column when prompted
+
+Function:
+1. Imports and preprocesses phenotypic data from two sources
+2. Identifies matching traits between datasets
+3. For each trait:
+   - Aligns data by genotype
+   - Calculates various statistical metrics (correlation, performance metrics)
+   - Generates visualizations (scatter plots, Bland-Altman plots, histograms, agreement matrices)
+   - Writes results to files
+
+Output:
+For each trait, in separate directories:
+1. CSV file with true and predicted values
+2. Text file with statistical metrics
+3. PDF file with four plots:
+   - Scatter plot of true vs predicted values
+   - Bland-Altman plot
+   - Histogram of differences
+   - Agreement matrix
+
+Output files are organized in the "output" directory, with subdirectories for each trait.
+
 * predict
 
 Purpose:

@@ -1,4 +1,4 @@
-#### requirements inputs and asumptions
+#### requirements inputs and assumptions
 
 ## requires an env with current version of R
 
@@ -9,13 +9,10 @@
 ##    - its trait cols are used to indentify prediction files
 ## phen0 is trainig data
 
-
 ## Ground Truth Phenotype file (.csv):
 ##    - Contains validated trait values for genotypes
 ##    - Used as the baseline for comparison with predictions
-## phen1 is validation data
-
-this requires named overlap between the two data sets, this is untested.
+## phen1 is validation data this requires named overlap between the two data sets, this is untested.
 
 #### setup ####
                                         # import
