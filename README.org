@@ -24,7 +24,7 @@ S. Babi, R. Rincent, V.G. Tran, D. Alvarez, J. Bordes, et al.. Peut-on prédire 
 * crossValidate
 
 Purpose: Performs genomic prediction using various methods and
-cross-validation, comparing their predictive abilities for a given phenotypic
+cross-validates the results, comparing their predictive abilities for a given phenotypic
 trait using genotype data. The program provides a comprehensive analysis of
 genomic prediction methods for the given dataset, allowing researchers to
 compare and select the most suitable approach for their breeding program.
