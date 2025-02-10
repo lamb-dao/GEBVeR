@@ -140,10 +140,10 @@ Output files are organized in the "output" directory, with subdirectories for ea
 * predict
 
 Purpose: Performs genomic prediction for breeding trait data using the BWGS
-(Breeding with Genomic Selection) package in R. The program predicts trait
-values for target genotypes based on a provided training population. The program
-automates the genomic prediction workflow, handling multiple traits and target
-populations, while providing visual and numerical outputs for interpretation.
+package in R. The program predicts trait values for target genotypes based on a
+provided training population. The program automates the genomic prediction
+workflow, handling multiple traits and target populations, while providing
+visual and numerical outputs for interpretation.
 
 Requirements:
 - R environment with: pacman, BWGS, vcfR, openxlsx, tools, ggplot2, viridis, reshape, plyr
